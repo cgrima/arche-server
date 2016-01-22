@@ -43,8 +43,12 @@ git clone https://github.com/libreoffice/online
 
 install dependencies
 ```sh
-apt-get install libreoffice libpng-dev libpoco-dev libcap-dev libcppunit-dev automake
-cd /var/www/html/online/
+apt-get install libreoffice libpng-dev libpoco-dev libcap-dev libcppunit-dev nodejs npm automake
+```
+
+Install Poco
+```
+cd /var/www/html
 git clone https://github.com/pocoproject/poco.git
 cd poco
 ./configure
@@ -64,7 +68,8 @@ autoreconf
 Compile loleaflet
 ```sh
 cd /var/www/html/online/loleaflet/
-
+npm install -g jake
+npm install
 ```
 
 Compile loolwsd
