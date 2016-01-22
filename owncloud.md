@@ -26,3 +26,37 @@ a2enmod env
 a2enmod headers
 '''
 Restart container
+
+
+LibreOffice Online
+===
+
+In the container, download the libreoffice online repo
+
+'''
+apt-get install git
+cd /var/www/html
+git clone https://github.com/libreoffice/online
+'''
+
+install dependencies
+'''
+apt-get install libreoffice libpng-dev libpoco-dev libcap-dev libcppunit-dev automake
+'''
+
+Compile loolwsd
+'''
+cd /var/www/html/online/loolwsd/
+'''
+
+Compile loleaflet
+'''
+cd /var/www/html/online/loleaflet/
+MASTER=/var/www/html/online/loolwsd/bundled/
+automake --add-missing
+autoreconf
+./configure --enable-silent-rules --with-lokit-path=${MASTER}/include --with-poco-includes=/user/include/Poco --with-poco-libs=/usr/include/Poco
+
+'''
+
+Compile loolwsd
