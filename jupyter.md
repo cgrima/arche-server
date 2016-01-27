@@ -6,6 +6,8 @@ Switch back to python3 environment by `source activate root`.
 You need to `pip` the same packages in each environment.
 
 #### Dependencies
+
+To do in both environment
 ```sh
-pip install lmfit
+pip install lmfit astropy
 ```
