@@ -21,7 +21,7 @@ aria2c --enable-rpc --rpc-allow-origin-all -c -D --log=/var/log/aria2.log --chec
 ```sh
 apt-get install vim cron
 crontab -u www-data -e
-*/15  *  *  *  * php -f /var/www/owncloud/cron.php > /dev/null 2>&1
+*/15  *  *  *  * php -f /var/www/html/cron.php > /dev/null 2>&1
 ```
 
 #### X-XSS-Protection
