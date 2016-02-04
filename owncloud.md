@@ -23,6 +23,7 @@ apt-get install vim cron
 crontab -u www-data -e
 */15  *  *  *  * php -f /var/www/html/cron.php > /dev/null 2>&1
 ```
+Then start cron daemon `/etc/init.d/cron start`
 
 #### X-XSS-Protection
 
