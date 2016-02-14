@@ -9,7 +9,7 @@ You need to `pip` the same packages in each environment.
 
 To do in both environment
 ```sh
-pip install lmfit matplotlib astropy astroML astroML_addons
+pip install lmfit matplotlib astropy astroML astroML_addons mpmath
 ```
 
 Check Modules installed by `pydoc modules`
