@@ -22,3 +22,24 @@ Remake grub configuration (for UEFI systems)
 ```
 sudo grub2-mkconfig -o /boot/efi/EFI/fedora/grub.cfg
 ```
+
+# Limit size og system logs
+
+You can also query journalctl to find out how much disk space it's consuming:
+
+```
+$ journalctl --disk-usage
+Journals take up 3.8G on disk.
+```
+
+You can control the size of this directory using this parameter in your /etc/systemd/journald.conf:
+
+```
+SystemMaxUse=50M
+```
+
+You can force a log rotation:
+
+```
+$ sudo systemctl kill --kill-who=main --signal=SIGUSR2 systemd-journald.service
+```
