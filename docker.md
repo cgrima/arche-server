@@ -15,7 +15,7 @@ Start the Docker daemon and enable automatic startup at boot:
 
 ```sh
 sudo systemctl start docker
-sudo systemctl enable docker`
+sudo systemctl enable docker
 ```
 
 [More on service management with systemd](https://fedoraproject.org/wiki/Systemd)
@@ -30,4 +30,5 @@ Disable firewalld to avoid issues like `503 error` on docker container access vi
 ```sh
 sudo systemctl stop firewalld.service
 sudo systemctl disable firewalld.service
+systemctl mask firewalld
 ```
