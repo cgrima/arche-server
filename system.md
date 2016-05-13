@@ -1,3 +1,10 @@
+# Dependencies
+
+```
+sudo dnf update
+sudo install fuse fuse-devel bindfs
+```
+
 # Change default Grub entry
 
 Check available entries
